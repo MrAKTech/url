@@ -11,7 +11,7 @@ class Config(object):
   BOT_OWNER = int(os.environ.get("BOT_OWNER", "6459102722"))
   DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://SINGER:SINGER@cluster0.1dt9hoe.mongodb.net/?retryWrites=true&w=majority")
   UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "")
-  FILE_TO_LINK_APPURL = os.environ.get("FILE_TO_LINK_APPURL", "https://cryptic-temple-92374-1133ffc4177c.herokuapp.com")
+  FILE_TO_LINK_APPURL = os.environ.get("FILE_TO_LINK_APPURL", "https://fileeesteammm-74db71fe64d5.herokuapp.com")
   FILE_TO_LINK_LOG = int(os.environ.get("FILE_TO_LINK_LOG", "-1001991880018"))
   LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1001956959333"))
   BANNED_USERS = set(int(x) for x in os.environ.get("BANNED_USERS", "").split())
