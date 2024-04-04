@@ -49,6 +49,7 @@ Bot = Client(
     api_hash=Config.API_HASH
 )
 
+REACTIONS = ["🔥", "❤️", "😍", "⚡", "👍", "👎"]
 
 @Bot.on_message(filters.private)
 async def _(bot: Client, cmd: Message):
