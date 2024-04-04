@@ -27,6 +27,7 @@ from handlers.database import db
 from handlers.add_user_to_db import add_user_to_database
 from handlers.send_file import send_media_and_reply
 from handlers.helpers import b64_to_str, str_to_b64
+from handlers.stream import direct_gen_handler
 from handlers.check_user_status import handle_user_status
 from handlers.force_sub_handler import (
     handle_force_sub,
@@ -309,7 +310,12 @@ async def clear_user_batch(bot: Client, m: Message):
 async def button(bot: Client, cmd: CallbackQuery):
 
     cb_data = cmd.data
-    if "aboutbot" in cb_data:
+    if "stream_button" in cb_data:
+        markup = await direct_gen_handler(cmd.message)
+        if markup:
+            await cmd.message.edit_reply_markup(markup)
+            
+    elif "aboutbot" in cb_data:
         await cmd.message.edit(
             Config.ABOUT_BOT_TEXT,
             disable_web_page_preview=True,
