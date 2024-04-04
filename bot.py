@@ -49,8 +49,6 @@ Bot = Client(
     api_hash=Config.API_HASH
 )
 
-REACTIONS = ["🔥", "❤️", "😍", "⚡", "👍", "👎"]
-
 @Bot.on_message(filters.private)
 async def _(bot: Client, cmd: Message):
     await handle_user_status(bot, cmd)
@@ -58,7 +56,6 @@ async def _(bot: Client, cmd: Message):
 
 @Bot.on_message(filters.command("start") & filters.private)
 async def start(bot: Client, cmd: Message):
-    await message.react(emoji=random.choice(REACTIONS))
     
     if cmd.from_user.id in Config.BANNED_USERS:
         await cmd.reply_text("Sorry, You are banned.")
