@@ -1,5 +1,4 @@
-
-from os import environ
+import os
 
 class Config(object):
   API_ID = int(os.environ.get("API_ID", "25435105"))
