@@ -2,8 +2,7 @@ import os
 
 class Config(object):
   API_ID = int(os.environ.get("API_ID", "25435105"))
-  PORT = int(environ.get('PORT', 8000))
-  NO_PORT = bool(environ.get('NO_PORT', False))
+  PORT = "8000"
   API_HASH = os.environ.get("API_HASH", "011126265844f2d7cc7dc1a024f6bc78")
   BOT_TOKEN = os.environ.get("BOT_TOKEN", "6734734174:AAERH1lMzFq2dgAi8V-Fp0WLU18_yl4OMCI")
   ANUSHKA_BOT_TOKEN = os.environ.get("ANUSHKA_BOT_TOKEN", "6734734174:AAERH1lMzFq2dgAi8V-Fp0WLU18_yl4OMCI")
